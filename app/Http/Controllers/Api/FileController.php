@@ -17,7 +17,7 @@ class FileController extends ApiController
 {
     public function index(Request $request): AnonymousResourceCollection
     {
-        $timestamp = Carbon::createFromTimestamp($request->get('timestamp'));
+        $timestamp = $request->has('timestamp') ? Carbon::createFromTimestamp($request->get('timestamp')) : now();
 
         return FileResource::collection(
             File::query()

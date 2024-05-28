@@ -16,3 +16,8 @@ After running <i>sail:install</i>, we can start the app using:
 ```bash
 ./vendor/bin/sail up
 ```
+
+To run tests after starting the application:
+```bash
+./vendor/bin/sail test
+```
