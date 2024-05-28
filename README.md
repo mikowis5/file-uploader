@@ -3,7 +3,12 @@
 
 ## Installation
 
-Using Docker, we need to run following commands:
+### Requirements:
+- Docker 🐳
+
+After navigating to project's root folder, create <i>.env</i> file out of <i>.env.example</i>.
+<br>
+Then, we need to run following command:
 
 ```bash
 php artisan sail:install
@@ -15,6 +20,8 @@ After running <i>sail:install</i>, we can start the app using:
 
 ```bash
 ./vendor/bin/sail up
+./vendor/bin/sail artisan key:generate
+./vendor/bin/sail artisan migrate
 ```
 
 To run tests after starting the application:
